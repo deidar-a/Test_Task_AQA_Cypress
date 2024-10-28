@@ -15,7 +15,7 @@ describe("Checkout Process", () => {
     cy.addToCart(["Sauce Labs Backpack"]);
     cartPage.cartOpen();
     cartPage.proceedToCheckout();
-    checkoutPage.verifyUserInfo(null, null, null);
+    checkoutPage.verifyUserInfo("", "", "");
   });
 
   it("should fill out user information and proceed to Checkout", () => {
@@ -24,7 +24,7 @@ describe("Checkout Process", () => {
     cartPage.proceedToCheckout();
     checkoutPage.fillUserInfo("First Name", "Last Name", "1122332");
     checkoutPage.chkContinue();
-    checkoutPage.verifyItemsAndTotalPrice(["Sauce Labs Backpack"], "$29.99");
+    checkoutPage.verifyItemsAndTotalPrice(["Sauce Labs Backpack"], "$32.39");
   });
 
   it("should submit the checkout and verify Checkout", () => {

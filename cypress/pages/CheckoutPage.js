@@ -16,7 +16,7 @@ class CheckoutPage {
     items.forEach((item) => {
       cy.contains(".cart_item", item).should("be.visible");
     });
-    cy.get(".summary_subtotal_label").should("contain", totalPrice);
+    cy.get(".summary_total_label").should("contain", totalPrice);
   }
   chkFinish() {
     cy.get("#finish").click();

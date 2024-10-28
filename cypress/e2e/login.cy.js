@@ -8,7 +8,7 @@ describe("Login", () => {
   beforeEach(() => {
     cy.visit("/");
   });
-  it("should load page without errors.  ", () => {
+  it("should load page without errors", () => {
     cy.url().should("include", "saucedemo.com");
     loginPage.getLoginButton().should("be.visible");
   });
